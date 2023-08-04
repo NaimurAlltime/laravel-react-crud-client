@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
 import Contact from "./components/Contact/Contact";
+import Create from "./components/CRUD/Create";
 import Home from "./components/Home/Home";
 import "./index.css";
 import Main from "./layout/Main";
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/create",
+        element: <Create />,
       },
       {
         path: "/about",
@@ -36,7 +41,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="max-w-screen-2xl mx-auto">
+    <div className="max-w-screen-xl mx-auto">
       <RouterProvider router={router} />
     </div>
   </React.StrictMode>
